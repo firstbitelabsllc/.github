@@ -34,6 +34,12 @@ Turn repository context into bounded, reviewable documentation patches. Claudux
 uses deterministic scope and validation rules so generated changes remain easy
 to understand and audit.
 
+### [Shadow](https://github.com/firstbitelabsllc/shadow)
+
+A plain-language chief of staff for ongoing engineering work. Shadow opens one
+durable plan from any seat and turns it into decisions, risks, and next moves —
+local-first, with mechanical proof for claims.
+
 ## How we work
 
 - Keep authority close to the code
