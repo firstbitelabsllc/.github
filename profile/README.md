@@ -8,6 +8,8 @@ skills, and testing audio.
 | [Shadow](https://github.com/firstbitelabsllc/shadow) | Coding work needs to continue across AI sessions with a saved plan, owner, and proof. |
 | [Skillbox](https://github.com/firstbitelabsllc/skillbox) | Several coding tools need the same local skill source. |
 | [Voice Debug Harness](https://github.com/firstbitelabsllc/voice-debug-harness) | A browser microphone test needs repeatable WAV input and an energy check. |
+| [Claudux](https://github.com/firstbitelabsllc/claudux) | Docs should update when the code changes, without touching the sections you wrote. |
+| [Takeoff](https://github.com/leojkwan/takeoff) | A release claim should end in a deterministic local proof pass, not a shrug. |
 
 Built by [Leo Kwan](https://github.com/leojkwan). Start with a repository's
 README for its installation path, limitations, license, and feedback policy.
