@@ -1,49 +1,13 @@
 # First Bite Labs
 
-First Bite Labs builds local-first trust rails for AI-assisted engineering:
-small, inspectable tools that keep software work resumable, reviewable, and
-verifiable.
+Small tools for the work around building software: keeping context, sharing
+skills, and testing audio.
 
-Each project keeps authority close to the repository, makes its scope explicit,
-and favors human-readable artifacts and mechanical evidence over hidden state.
+| Tool | Use it when… |
+| --- | --- |
+| [Shadow](https://github.com/firstbitelabsllc/shadow) | Coding work needs to continue across AI sessions with a saved plan, owner, and proof. |
+| [Skillbox](https://github.com/firstbitelabsllc/skillbox) | Several coding tools need the same local skill source. |
+| [Voice Debug Harness](https://github.com/firstbitelabsllc/voice-debug-harness) | A browser microphone test needs repeatable WAV input and an energy check. |
 
-## Open-source projects
-
-### [Skillbox](https://github.com/firstbitelabsllc/skillbox)
-
-Distribute one reviewed skill corpus across supported local coding tools without
-copying or forking its source. Skillbox makes installs, audits, and updates
-inspectable and repeatable.
-
-### [Voice Debug Harness](https://github.com/firstbitelabsllc/voice-debug-harness)
-
-Feed bounded WAV audio through Chromium's `getUserMedia()` boundary and verify
-that energy reaches the injected stream. Voice Debug Harness runs offline and
-proves the browser audio path—not transcription, live communications, or
-physical microphone hardware.
-
-### [Vidux](https://github.com/firstbitelabsllc/vidux)
-
-Keep multi-session work durable with one repository-owned plan, explicit
-acceptance evidence, and a clear resume point. Vidux makes project state
-reviewable without becoming the agent runtime.
-
-### [Claudux](https://github.com/firstbitelabsllc/claudux)
-
-Turn repository context into bounded, reviewable documentation patches. Claudux
-uses deterministic scope and validation rules so generated changes remain easy
-to understand and audit.
-
-### [Shadow](https://github.com/firstbitelabsllc/shadow)
-
-A plain-language chief of staff for ongoing engineering work. Shadow opens one
-durable plan from any seat and turns it into decisions, risks, and next moves —
-local-first, with mechanical proof for claims.
-
-## How we work
-
-- Keep authority close to the code
-- Make boundaries and limitations explicit
-- Preserve durable, human-readable state
-- Back important claims with mechanical checks
-- Report incomplete work honestly
+Built by [Leo Kwan](https://github.com/leojkwan). Start with a repository's
+README for its installation path, limitations, license, and feedback policy.
