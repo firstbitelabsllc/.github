@@ -11,15 +11,23 @@ replace a build, a test run, branch protection, or deployment approval.
 The root `.coderabbit.yaml` is the reusable baseline and applies to this `.github`
 repository. It enables assertive reviews, draft and incremental reviews, review
 summaries with validation evidence, agent-ready fix prompts, code guideline
-reading, and slop detection for all authors. Existing tool integrations retain
-their schema defaults and run when applicable.
+reading, and slop detection for all authors. Knowledge-base learnings, issues,
+and prior PR context stay local to this repository; automatic cross-repository
+linking is disabled. Guidelines come from its README, SECURITY, AGENTS and REVIEW
+files. Broader organization sharing requires its own reviewed scope. Existing
+tool integrations retain their schema defaults and run when applicable.
 
 The request-changes workflow is enabled: CodeRabbit may approve after its feedback
 is resolved, the latest commit has been reviewed, and pre-merge checks allow it.
-Authors cannot use CodeRabbit's author-approval override. This is an AI review
-signal, not human approval or an auto-merge rule. Repository branch protections
-still govern merging. Review service errors fail CodeRabbit's outward status;
-the status becomes a merge gate only if the repository requires it.
+Authors cannot use CodeRabbit's author-approval override. Other eligible users
+can still issue top-level `@coderabbitai approve` or `@coderabbitai resolve` to
+approve the current head without a completed review or passing pre-merge checks.
+Require independently observed review coverage for the exact PR head, all
+required deterministic checks, and resolved human change requests before merge.
+A successful status or an approval alone does not establish that coverage.
+Repository branch protections still govern merging. Review service errors fail
+CodeRabbit's outward status; the status becomes a merge gate only if the
+repository requires it.
 
 Title, description, linked-issue, and verification-evidence checks start in warning
 mode. The evidence check inspects reported proof; it cannot certify that commands
