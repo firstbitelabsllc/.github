@@ -109,6 +109,13 @@ coderabbit pullrequest PR_URL --show-prompts --agent
 5. Let incremental PR review assess the new commit. Automatic reviews pause after
    five reviewed commits; resume deliberately if more feedback is useful.
 
+
+For a batch of local fixes, comment `@coderabbitai pause`, then
+`@coderabbitai resume` when the affected checks pass. A resume on an already
+reviewed head can skip another review while an older status still says
+“Reviews paused.” Check the next real commit's automatic review and exact-head
+coverage; neither a missing paused notice nor a green status proves resumption.
+
 Do not add paid-credit flags or recursive review loops. Trial quotas and renewal
 settings must be checked in the service. This repository change does not install
 or authenticate the CLI on a developer's Mac, buy seats, or activate paid credits.
