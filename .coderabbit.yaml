@@ -104,6 +104,7 @@ knowledge_base:
     filePatterns:
       - README.md
       - SECURITY.md
+      - docs/code-review.md
       - "**/AGENTS.md"
       - "**/REVIEW.md"
   learnings:

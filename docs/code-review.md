@@ -13,8 +13,8 @@ repository. It enables assertive reviews, draft and incremental reviews, review
 summaries with validation evidence, agent-ready fix prompts, code guideline
 reading, and slop detection for all authors. Knowledge-base learnings, issues,
 and prior PR context stay local to this repository; automatic cross-repository
-linking is disabled. Guidelines come from its README, SECURITY, AGENTS and REVIEW
-files. Broader organization sharing requires its own reviewed scope. Existing
+linking is disabled. Guidelines include this review workflow alongside README,
+SECURITY, AGENTS and REVIEW files. Broader organization sharing requires its own reviewed scope. Existing
 tool integrations retain their schema defaults and run when applicable.
 
 The request-changes workflow is enabled: CodeRabbit may approve after its feedback
