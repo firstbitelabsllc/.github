@@ -75,6 +75,12 @@ Confirm the source, path instructions, automatic review behavior, and offered
 finishing touches. Record the PR URL, reviewed commit, checks, and unresolved
 findings. Do not call a feature activated until the service demonstrates it.
 
+Use a fresh pull request targeting a `main` that contains the merged configuration.
+A configuration readback in an already merged PR conversation can still report
+default values without a source path or revision; it does not establish which
+settings a new review will load. Check the fresh review’s configuration source,
+profile, commit coverage, and guideline usage before accepting activation.
+
 ## Agent and local harness loop
 
 Use the repository's declared runtime, formatter, and verification commands.
