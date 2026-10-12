@@ -114,5 +114,5 @@ knowledge_base:
   pull_requests:
     scope: local
 chat:
-  auto_reply: true
+  auto_reply: false
   art: false
