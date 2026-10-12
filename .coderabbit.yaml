@@ -84,6 +84,9 @@ reviews:
           and describes its validation. Warn when proof is absent, stale relative
           to the latest change, or claimed without an outcome. This checks the
           completeness of reported evidence; it does not execute or authenticate it.
+          For behavior changes, look for the user-facing acceptance criterion,
+          observed interaction/result, artifact reference, and unverified gaps.
+          Keep local proof, CI, current-head review, and deployment claims separate.
   finishing_touches:
     docstrings:
       enabled: true
@@ -105,6 +108,7 @@ knowledge_base:
       - README.md
       - SECURITY.md
       - docs/code-review.md
+      - docs/verification-loop.md
       - "**/AGENTS.md"
       - "**/REVIEW.md"
   learnings:
