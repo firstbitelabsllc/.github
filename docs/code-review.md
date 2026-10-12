@@ -35,11 +35,8 @@ ran. Generic docstring percentage checks are off to avoid unrelated churn across
 Swift, JavaScript, documentation, and tool repositories.
 
 Autofix, test generation, docstrings, simplification, CI repair, and conflict
-resolution are enabled for deliberate use through CodeRabbit's available controls.
-These settings expose capabilities, not blanket permission to change every PR.
-Availability still depends on the installed app, permissions, current plan, and
-repository support. Some documented finishing touches require Team or higher;
-the trial screenshot alone does not establish their availability.
+resolution are disabled. Source edits, fixes, and verification stay with the
+repository's local source owner and existing harness.
 
 ## Apply across repositories
 
