@@ -35,11 +35,8 @@ ran. Generic docstring percentage checks are off to avoid unrelated churn across
 Swift, JavaScript, documentation, and tool repositories.
 
 Autofix, test generation, docstrings, simplification, CI repair, and conflict
-resolution are enabled for deliberate use through CodeRabbit's available controls.
-These settings expose capabilities, not blanket permission to change every PR.
-Availability still depends on the installed app, permissions, current plan, and
-repository support. Some documented finishing touches require Team or higher;
-the trial screenshot alone does not establish their availability.
+resolution are disabled. Source edits, fixes, and verification stay with the
+repository's local source owner and existing harness.
 
 ## Apply across repositories
 
@@ -75,6 +72,12 @@ Confirm the source, path instructions, automatic review behavior, and offered
 finishing touches. Record the PR URL, reviewed commit, checks, and unresolved
 findings. Do not call a feature activated until the service demonstrates it.
 
+Use a fresh pull request targeting a `main` that contains the merged configuration.
+A configuration readback in an already merged PR conversation can still report
+default values without a source path or revision; it does not establish which
+settings a new review will load. Check the fresh review’s configuration source,
+profile, commit coverage, and guideline usage before accepting activation.
+
 ## Agent and local harness loop
 
 Use the [verification-loop skills](verification-loop.md) to generate and maintain
@@ -107,6 +110,13 @@ coderabbit pullrequest PR_URL --show-prompts --agent
    limitations, and changed behavior in the PR description.
 5. Let incremental PR review assess the new commit. Automatic reviews pause after
    five reviewed commits; resume deliberately if more feedback is useful.
+
+
+For a batch of local fixes, comment `@coderabbitai pause`, then
+`@coderabbitai resume` when the affected checks pass. A resume on an already
+reviewed head can skip another review while an older status still says
+“Reviews paused.” Check the next real commit's automatic review and exact-head
+coverage; neither a missing paused notice nor a green status proves resumption.
 
 Do not add paid-credit flags or recursive review loops. Trial quotas and renewal
 settings must be checked in the service. This repository change does not install

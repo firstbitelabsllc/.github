@@ -89,17 +89,17 @@ reviews:
           Keep local proof, CI, current-head review, and deployment claims separate.
   finishing_touches:
     docstrings:
-      enabled: true
+      enabled: false
     unit_tests:
-      enabled: true
+      enabled: false
     simplify:
-      enabled: true
+      enabled: false
     autofix:
-      enabled: true
+      enabled: false
     fix_ci:
-      enabled: true
+      enabled: false
     resolve_merge_conflict:
-      enabled: true
+      enabled: false
 knowledge_base:
   automatic_linking_mode: disabled
   code_guidelines:
@@ -118,5 +118,5 @@ knowledge_base:
   pull_requests:
     scope: local
 chat:
-  auto_reply: true
+  auto_reply: false
   art: false
