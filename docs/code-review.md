@@ -80,6 +80,11 @@ profile, commit coverage, and guideline usage before accepting activation.
 
 ## Agent and local harness loop
 
+Use the [verification-loop skills](verification-loop.md) to generate and maintain
+a runnable feature map. Capture the real user interaction and its observed result
+before treating a change as behaviorally verified. The [evidence template](verification-evidence-template.md)
+keeps this proof separate from CI, review, and deployment claims.
+
 Use the repository's declared runtime, formatter, and verification commands.
 Follow its `AGENTS.md` and saved ownership/admission rules before starting local
 work. T3/Shadow coordinates ownership; it must not start another competing agent
