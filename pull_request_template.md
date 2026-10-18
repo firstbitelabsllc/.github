@@ -1,5 +1,9 @@
-<!-- Explain the problem, changed behavior, and why this implementation fits.
-Keep important conditions and rollout dependencies visible. -->
+## What changes
+
+<!-- Name who was affected, what happened before, and what happens now.
+Explain consequential implementation choices and rollout dependencies.
+For visible behavior, add a captioned before/after capture when useful.
+Use a small table or Mermaid only when it explains this change better. -->
 
 ## Checked
 
