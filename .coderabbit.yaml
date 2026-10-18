@@ -8,10 +8,10 @@ tone_instructions: >-
   and missing verification. Give file/line evidence and a concrete fix. Respect
   repository-specific local-first workflows; avoid cosmetic churn.
 reviews:
-  profile: chill
+  profile: quiet
   request_changes_workflow: false
   allow_author_approval: false
-  high_level_summary: true
+  high_level_summary: false
   high_level_summary_instructions: >-
     Explain the behavior change, affected components, compatibility risks, and
     validation reported in the PR. Clearly distinguish reported proof from
@@ -20,17 +20,17 @@ reviews:
   review_details: true
   fail_commit_status: false
   collapse_walkthrough: true
-  sequence_diagrams: true
-  estimate_code_review_effort: true
+  sequence_diagrams: false
+  estimate_code_review_effort: false
   assess_linked_issues: true
-  suggested_reviewers: true
-  enable_prompt_for_ai_agents: true
+  suggested_reviewers: false
+  enable_prompt_for_ai_agents: false
   in_progress_fortune: false
   poem: false
   auto_review:
     enabled: true
     auto_incremental_review: true
-    drafts: true
+    drafts: false
     # Batch fixes; resume deliberately instead of exhausting the trial in a loop.
     auto_pause_after_reviewed_commits: 5
   slop_detection:
@@ -63,16 +63,32 @@ reviews:
         and cited source. Distinguish configured capabilities from activated
         services, trial entitlements, completed tests, and deployment receipts.
   pre_merge_checks:
-    override_requested_reviewers_only: true
+    # One custom check covers explanation quality; avoid duplicate warnings
+    # and skipped issue checks presented as successful verification.
     title:
-      mode: warning
-      requirements: Describe the concrete behavior changed; avoid generic titles.
+      mode: "off"
     description:
-      mode: warning
+      mode: "off"
     issue_assessment:
-      mode: warning
+      mode: "off"
     docstrings:
       mode: "off"
+    custom_checks:
+      - name: Explain the change and its proof
+        mode: warning
+        instructions: >-
+          Compare the title and description with the diff. Warn if a reader
+          cannot identify the problem, changed behavior, or consequential design
+          choice without chat history. Establish scope from the PR changed files
+          or merge-base-to-head diff; exclude changes only on a newer base.
+          If scope is unavailable, report inconclusive. Checks must name what was exercised and
+          preserve mocks, qualifying conditions, and material untested risks.
+          Distinguish reported results from checks you observed. Give a specific
+          correction; preserve detailed evidence behind links or disclosures.
+          Accept any readable format. Suggest a before/after capture, table, or
+          Mermaid only when it clarifies this change; missing media is not itself
+          a defect. Do not invent tests, require a word count,
+          or rewrite the body. Report inconclusive when evidence is insufficient.
   finishing_touches:
     docstrings:
       enabled: false
